@@ -1,10 +1,12 @@
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
@@ -51,9 +53,13 @@ img {
 
 /*Хедер*/
 .page-header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 110px;
 }
@@ -87,10 +93,14 @@ img {
     font-weight: 700;
     color: #D1A954; 
     border: 1px solid rgba(209, 169, 84, 0.9);
+    -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Наши услуги*/
 .services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .services-list-item:not(:last-child) {
@@ -163,11 +173,16 @@ img {
     color: #000000;
 }
 .about-us-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .about-us-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .about-us-text-wrapper {
     margin-right: 125px;
@@ -189,9 +204,15 @@ img {
     margin-bottom: 39px;
 }
 .about-us-list-item-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items:baseline;
-    justify-content: center;
+    -webkit-box-align:baseline;
+        -ms-flex-align:baseline;
+            align-items:baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .about-us-list-image {
     margin-right: 25px;
@@ -205,8 +226,11 @@ img {
     padding-bottom: 150px;
 }
 .gallery-photo-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
 }
 .gallery-desc-wrapper {
     margin-right: 100px;
@@ -224,8 +248,13 @@ img {
     margin-bottom: 30px;
 }
 .gallery-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 30px;
 }
 .why-are-we {
@@ -247,6 +276,8 @@ img {
     color: #ffffff;
 }
 .why-are-we-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .why-are-we-btn {
@@ -277,6 +308,8 @@ img {
     padding-bottom: 120px;
 }
 .contacts .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: calc(100% - 30px)/2;
 }
@@ -298,9 +331,13 @@ img {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .contacts-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .title-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .contacts-subtitle {
@@ -319,6 +356,8 @@ img {
     margin-right: 120px;
 }
 .contacts-list-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .cotnatcs-rest-image,
@@ -334,8 +373,13 @@ img {
     margin-left: 30px;
 }
 .contacts-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .link {
     font-family: Prata;
@@ -357,6 +401,34 @@ img {
 .contacts-form-mail-input:focus{
     border-color:#D1A954;
 }
+.contacts-form-name-input::-webkit-input-placeholder, .contacts-form-mail-input::-webkit-input-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
+.contacts-form-name-input::-moz-placeholder, .contacts-form-mail-input::-moz-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
+.contacts-form-name-input:-ms-input-placeholder, .contacts-form-mail-input:-ms-input-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
+.contacts-form-name-input::-ms-input-placeholder, .contacts-form-mail-input::-ms-input-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
 .contacts-form-name-input::placeholder,
 .contacts-form-mail-input::placeholder {
     font-family: Prata;
@@ -373,6 +445,38 @@ img {
     margin-bottom: 35px;
     border: 0.5px solid #D0D0D0;
     resize: none;
+}
+
+.contacts-form-comment::-webkit-input-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
+
+.contacts-form-comment::-moz-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
+
+.contacts-form-comment:-ms-input-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
+}
+
+.contacts-form-comment::-ms-input-placeholder {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #616161;
 }
 
 .contacts-form-comment::placeholder {
@@ -433,12 +537,18 @@ img {
     color: #000000; 
 }
 .photo-examples-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .page-footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .footer-social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .page-footer {
@@ -471,5 +581,7 @@ img {
     font-weight: 700;
     color: #D1A954; 
     border: 1px solid rgba(209, 169, 84, 0.9);
+    -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
